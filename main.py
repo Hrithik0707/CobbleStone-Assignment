@@ -254,6 +254,25 @@ elif sys.argv[2]=='Isolation':
     plt.ylabel('Value')
     plt.legend()
     plt.savefig("output.jpg")
+else:
+    model = IsolationForest(random_state = 0, contamination = float(0.05))
+    model.fit(data[['value']])
+    data['scores'] = model.decision_function(data[['value']])
+    data['anomaly_score'] = model.predict(data[['value']])
+    outliers = data.loc[data['anomaly_score']==-1]
+    outlier_index = list(outliers.index)
+    plt.figure(figsize = (16, 8))
+
+    plt.plot(data['value'], marker = '.')
+    plt.plot(outliers['value'], 'o', color = 'red', label = 'outlier')
+    plt.title('Detection By Isolation Forest')
+
+    #plt.grid()
+    plt.xlabel('TimeStamp')
+    plt.ylabel('Value')
+    plt.legend()
+    plt.savefig("output.jpg")
+
     	
     	
     
