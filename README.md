@@ -25,6 +25,7 @@ Optimization: Ensure the algorithm is optimized for both speed and efficiency.
 ## Solution. 
   ### Assumptions. 
     * Input should be in .csv format with necessary two columns as the "timestamp"(index) and "value"(floating point).
+    * Four Algorithms , Moving Average  (Moving_Average) , ARIMA (ARIMA) , Seasonal Moving Average (Seasonal_bucket) , Isolation Forest (Isolation) 
     * Output visulization is showin in output.jpg.
 
 ## Algorithm and Time Complexity
@@ -89,10 +90,19 @@ Time Complexity:
 The time complexity of fitting an ARIMA model is more complex and can range from O(n) to O(n²), depending on the implementation, the order of the model (p, d, q), and the optimizations used. The (p, d, q) parameters represent the autoregressive, differencing, and moving average components, respectively.
 For large values of p and q, the complexity increases as the algorithm needs to estimate a higher number of parameters.
 
+S
+### Seasonal Moving Average
+easonal Moving Average is a variation of the moving average technique tailored for time series data with seasonal patterns. It involves calculating moving averages for each season separately. This method is particularly useful in scenarios where the data exhibits regular and predictable changes that repeat over each season.
+
+Time Complexity:
+
+The time complexity of a seasonal moving average is still O(n), where n is the length of the time series. This is because the computation for each point in the series is a simple average of a fixed number of points (the number of seasons), akin to the standard moving average.
+The operation remains linear since the process of averaging a set number of points does not change in complexity as the dataset size increases.
 
 ### Summary
 
 * Isolation Forest offers a good balance between performance and scalability, especially for high-dimensional datasets, but its complexity can increase with the number of trees.
 * Moving Average is highly scalable due to its linear complexity, making it efficient for large datasets, but it's limited in its application to basic trend analysis.
 * ARIMA can be computationally intensive, especially for large datasets or higher order models. It's less scalable compared to the other two methods but offers more comprehensive forecasting capabilities.
+* The Seasonal Moving Average is efficient and straightforward for time series data with clear seasonal patterns. Its linear time complexity (O(n)) makes it scalable and suitable for large datasets.
 * For this task Isolation Forest is been choosen as default.
