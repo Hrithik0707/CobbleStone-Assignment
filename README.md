@@ -23,5 +23,8 @@ Optimization: Ensure the algorithm is optimized for both speed and efficiency.
   eg. python3 main.py cpu4.csv Isolation
 
 ## Solution. 
+  ### Assumptions. 
+    * Input should be in .csv format with necessary two columns as the "timestamp"(index) and "value"(floating point).
+    * Output visulization is showin in output.jpg.
 
-* Input 
+## Algorithm and Time Complexity
