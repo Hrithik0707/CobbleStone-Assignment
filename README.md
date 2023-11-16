@@ -19,7 +19,8 @@ Optimization: Ensure the algorithm is optimized for both speed and efficiency.
 * git clone https://github.com/Hrithik0707/CobbleStone-Assignment.git or download zip.
 * create a virtual environment using "virtualenv myenv"
 * pip install -r requirements.txt.
-* python3 main.py {yourfile.csv} {algorithm}        eg. python3 main.py cpu4.csv Isolation
+* python3 main.py {yourfile.csv} {algorithm}
+  eg. python3 main.py cpu4.csv Isolation
 
 ## Solution. 
 
