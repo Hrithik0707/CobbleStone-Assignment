@@ -15,4 +15,12 @@ Optimization: Ensure the algorithm is optimized for both speed and efficiency.
 * Visualization: Create a straightforward real-time visualization tool to display both the data stream and any detected anomalies.
 
 
+## How to Run the project.
+* git clone
+* create a virtual environment using "virtualenv myenv"
+* pip install -r requirements.txt.
+* python3 main.py {yourfile.csv} {algorithm}        eg. python3 main.py cpu4.csv Isolation
+
 ## Solution. 
+
+* Input 
