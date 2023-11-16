@@ -236,7 +236,6 @@ elif sys.argv[2]=='ARIMA':
 elif sys.argv[2]=='Seasonal_bucket':
     parameters = {'min_buckets': 30, 'window': 2}
     plot_anomalies(data, AnomalyDetectionSeasonalBucket, parameters, dumping=True, casting=dt.datetime.fromtimestamp)
-    
 elif sys.argv[2]=='Isolation':
     model = IsolationForest(random_state = 0, contamination = float(0.05))
     model.fit(data[['value']])
